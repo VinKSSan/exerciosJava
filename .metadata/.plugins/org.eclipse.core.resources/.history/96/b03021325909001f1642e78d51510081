@@ -1,0 +1,34 @@
+package into;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class cprim {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		List<String> strL = new ArrayList<>();
+		
+		System.out.println("quantas strings?");
+		int nStr = sc.nextInt();// pedimos que o usuário entre com o numero de strings
+		
+		int i=0;
+		while(i != nStr ) {
+			System.out.print(i+nStr);
+			i+=1;
+		}
+		
+		// TODO Auto-generated method stub
+		String digitar = "qual sua string?" ;
+		System.out.println(digitar);
+		String suaSTR = sc.nextLine();
+		
+		System.out.println("sua string é: "+suaSTR);
+		sc.close();
+	}
+
+}

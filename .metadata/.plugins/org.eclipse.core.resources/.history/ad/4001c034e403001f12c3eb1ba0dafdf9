@@ -1,0 +1,18 @@
+package operations;
+
+
+
+import java.util.List;
+
+import exception.OpcaoInvalida;
+
+@FunctionalInterface
+public interface SallerOperation {
+	void operation(List<?> sales, Integer opt);
+	
+	default void opt(Integer opt) throws OpcaoInvalida{
+		if(opt <1 || opt>3) {
+			throw new OpcaoInvalida("numero diferente dos disponiveis(1,2,3)");
+		}
+	};
+}

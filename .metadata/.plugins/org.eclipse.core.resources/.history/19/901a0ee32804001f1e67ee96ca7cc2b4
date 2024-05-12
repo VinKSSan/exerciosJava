@@ -1,0 +1,13 @@
+package entitis;
+
+public class Sale {
+	private Integer month;
+	private Integer year;
+	private String saller;
+	private Integer items;
+	private Double total;
+	
+	public Double averagePrice(Double total, Integer items) {
+		return total / items;
+	}
+}

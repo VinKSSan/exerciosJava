@@ -1,0 +1,5 @@
+package model.entitis;
+
+public class Reservation {
+
+}

@@ -1,0 +1,82 @@
+package entitis;
+
+import java.util.List;
+
+import exception.OpcaoInvalida;
+import operations.SallerOperation;
+
+public class Sales implements SallerOperation {
+	private Integer month;
+	private Integer year;
+	private String saller;
+	private Integer items;
+	private Double total;
+
+	public Sales() {
+	}
+
+	public Sales(Integer month, Integer year, String saller, Integer items, Double total, Integer opt)
+			throws OpcaoInvalida {
+		this.opt(opt);
+		this.month = month;
+		this.year = year;
+		this.saller = saller;
+		this.items = items;
+		this.total = total;
+	}
+
+	public Integer getMonth() {
+		return month;
+	}
+
+	public void setMonth(Integer month) {
+		this.month = month;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
+	}
+
+	public String getSaller() {
+		return saller;
+	}
+
+	public void setSaller(String seller) {
+		this.saller = seller;
+	}
+
+	public Integer getItems() {
+		return items;
+	}
+
+	public void setItems(Integer items) {
+		this.items = items;
+	}
+
+	public Double getTotal() {
+		return total;
+	}
+
+	public void setTotal(Double total) {
+		this.total = total;
+	}
+
+	@Override
+	public String toString() {
+		return "Sales: date: " + month + "/" + year + ", saller: " + saller + ", items: " + items + ", total: "
+				+ total + ", average: "+String.format("%.2f", this.averagePrice(total, items));
+	}
+
+	public Double averagePrice(Double total, Integer items) {
+		return total / items;
+	}
+
+	@Override
+	public void operation(List<Sales> sales, Integer opt) {
+	}
+
+}

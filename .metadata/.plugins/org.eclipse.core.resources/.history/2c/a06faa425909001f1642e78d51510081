@@ -1,0 +1,33 @@
+package into;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class cprim {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		List<String> strL = new ArrayList<>();
+		
+		System.out.println("quantas strings?");
+		int nStr = sc.nextInt();// pedimos que o usuário entre com o numero de strings
+		
+		int i=0;
+		while(i != nStr ) {
+			i+=1;
+			System.out.println("qual"+i+"º sua string?");
+			String suaSTR = sc.nextLine();
+			strL.add(suaSTR);
+		}
+		
+		
+		System.out.println("suas string's são: "+strL.toString());
+		
+		sc.close();
+	}
+
+}

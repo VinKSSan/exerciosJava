@@ -1,0 +1,43 @@
+package into;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.function.Function;
+
+public class cprim {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		Function<List<String>, String> funcao1 = (List<String> str)->{
+			return "suas string's são: "+ str.toString();
+		};
+		Function<Integer, List<String>> funcao2 = (Integer i)->{
+			List<String> strL = new ArrayList<>();
+			int n=0;
+			sc.nextLine();
+			while(n < i ) {
+				n+=1;
+				System.out.print("qual sua "+n+"º string?");
+				String suaSTR = sc.nextLine();
+				strL.add(suaSTR);
+			}
+			
+			return strL;
+		};
+		
+		
+		
+		System.out.print("quantas strings?");
+		int nStr = sc.nextInt();
+		
+		System.out.println(funcao1.apply(funcao2.apply(nStr)));
+		
+		sc.close();
+	}
+
+}

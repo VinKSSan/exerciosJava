@@ -1,0 +1,11 @@
+package operations;
+
+import java.util.List;
+
+public interface SearchSeller {
+	public default Sales search(List<S> lista ,String seller) {
+		lista.stream()
+			.foreach(s->s.getSeller==seller?seller)
+			
+	}
+}
